@@ -385,6 +385,31 @@ header.scrolled {
   height: auto;
   border-radius: 50%;
 }
+.contact {
+  align-items: center;
+}
+.contact-detail {
+  background: var(--bg);
+  justify-between:space-between;
+  items-center;
+  display:flex;
+  justify-between:space-between;
+  padding:30px;
+}
+.contact-detail div{
+  margin-left:10px;
+  
+  
+}
+.contact input {
+  padding: 10px;
+  margin-bottom: 10px;
+  display: block;
+  border-radius: 5px;
+  width:100%;
+  align-items:center;
+
+}
 .footer {
   background-color: var(--main-color);
   color: black;
