@@ -75,6 +75,7 @@ header.scrolled {
   background-color: var(--primary);
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
   transition: background-color 0.5 ease-in-out;
+  height:8rem;
 }
 .header .logo {
   font-size: 2.2rem;
@@ -90,10 +91,6 @@ header.scrolled {
 
 .header .navbar a:hover {
   color: var(--main-color);
-}
-.header .navbar a:target {
-  color: var(--main-color);
-  background: var(--main-color);
 }
 
 #menu {
@@ -131,21 +128,6 @@ header.scrolled {
   color: var(--white);
   padding-bottom: 3.5rem;
 }
-
-/* end */
-/* swiper*/
-/* .swiper-container {
-  margin:0;
-  width: 100%;
-  height: 100%;
-}
-
-.swiper-slide {
-  background-size: cover;
-  background-position: center;
-} */
-
-/* about */
 
 .about .row {
   display: flex;
@@ -385,31 +367,37 @@ header.scrolled {
   height: auto;
   border-radius: 50%;
 }
-.contact {
-  align-items: center;
-}
-.contact-detail {
-  background: var(--bg);
-  justify-between:space-between;
-  items-center;
-  display:flex;
-  justify-between:space-between;
-  padding:30px;
-}
-.contact-detail div{
-  margin-left:10px;
-  
-  
-}
-.contact input {
-  padding: 10px;
-  margin-bottom: 10px;
-  display: block;
-  border-radius: 5px;
-  width:100%;
-  align-items:center;
 
+
+.contact-detail {
+  min-width:100px
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
 }
+
+iframe {
+  width: 400px;
+  height: 300px;
+  border: 0;
+  border-radius: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+textarea {
+  resize: vertical;
+}
+
 .footer {
   background-color: var(--main-color);
   color: black;
