@@ -75,7 +75,7 @@ header.scrolled {
   background-color: var(--primary);
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
   transition: background-color 0.5 ease-in-out;
-  height:8rem;
+  height: 8rem;
 }
 .header .logo {
   font-size: 2.2rem;
@@ -367,18 +367,32 @@ header.scrolled {
   height: auto;
   border-radius: 50%;
 }
-.contact h1{
-  text-align:center;
-  color:var(--main-color);
-  font-size:35px;
+.contact h1 {
+  text-align: center;
+  color: var(--main-color);
+  font-size: 35px;
+  margin-bottom:20px;
+}
+.contact-detail {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
-.contact-detail {
-  min-width:100px
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 30px;
+.map-container,
+.form-container {
+    flex-basis: calc(50% - 10px);
+}
+
+@media (max-width: 768px) {
+    .contact-detail {
+        flex-direction: column;
+    }
+
+    .map-container,
+    .form-container {
+        flex-basis: 100%;
+    }
 }
 
 iframe {
