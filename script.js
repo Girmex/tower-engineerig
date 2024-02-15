@@ -24,3 +24,12 @@ window.onscroll = () => {
       delay: 3000, // Adjust the delay between slides (in milliseconds)
     },
   });
+
+  const activePage= window.location.pathname;
+  const NavLinks= document.querySelectorAll('nav a').forEach(link=>{
+    if(link.href.includes(`${activePage}`)){
+      link.classList.add('active');
+      console.log(link.href);
+      console.log(activePage)
+    }
+  })

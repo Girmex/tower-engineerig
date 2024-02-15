@@ -28,6 +28,8 @@ html {
   scroll-padding-top: 6rem;
 }
 
+
+
 section {
   padding: 3rem 9%;
 }
@@ -91,6 +93,10 @@ header.scrolled {
 
 .header .navbar a:hover {
   color: var(--main-color);
+}
+.active{
+  /* background:black;
+  padding:4px; */
 }
 
 #menu {
