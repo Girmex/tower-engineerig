@@ -1,9 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap");
 
 :root {
-  --main-color: #008b80;
+  --main-color: #07182e;
   --primary: #f0fff0;
-  --black: #141414;
   --white: #fff;
   --bg: #f2f2f2;
   --light-black: #666;
@@ -74,7 +73,7 @@ section {
   background: transparent;
 }
 header.scrolled {
-  background-color: var(--primary);
+background-image: radial-gradient(#021331, #122641);
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
   transition: background-color 0.5 ease-in-out;
   height: 8rem;
@@ -82,21 +81,23 @@ header.scrolled {
 .header .logo {
   font-size: 2.2rem;
   font-weight: bolder;
-  color: var(--main-color);
+  color: var(--primary);
 }
 
 .header .navbar a {
   font-size: 1.7rem;
   margin-left: 2rem;
-  color: var(--black);
+  color: var(--primary);
+  background: transparent;
 }
+
 
 .header .navbar a:hover {
   color: var(--main-color);
 }
 .active{
-  /* background:black;
-  padding:4px; */
+  background:black;
+  padding:4px;
 }
 
 #menu {
@@ -105,7 +106,12 @@ header.scrolled {
   color: var(--main-color);
   display: none;
 }
-
+#close {
+  font-size: 2.5rem;
+  cursor: pointer;
+  color: var(--main-color);
+  display: none;
+}
 /* end */
 
 /* home */
@@ -115,7 +121,7 @@ header.scrolled {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: url(images/home.png) no-repeat;
+  background-image: radial-gradient(rgba(0, 0, 50, 0.8), rgba(0, 0, 50, 0.8)), url(./images/home.png);
   background-size: cover;
   background-attachment: fixed;
   top: 0;
@@ -124,7 +130,7 @@ header.scrolled {
 }
 
 .home .content {
-  max-width: 60rem;
+  width: auto;
   text-align: center;
 }
 
@@ -238,6 +244,7 @@ header.scrolled {
   padding: 0.5rem;
   font-size: 1.4rem;
   color: var(--black);
+  text-align: justify;
 }
 
 .services .box-container .box .content ul li i {
@@ -373,6 +380,10 @@ header.scrolled {
   height: auto;
   border-radius: 50%;
 }
+.contact{
+  width: 100%;
+  background-image: linear-gradient(rgba(0, 0, 50, 0.8), rgba(0, 0, 50, 0.8))
+}
 .contact h1 {
   text-align: center;
   color: var(--main-color);
@@ -424,7 +435,7 @@ textarea {
 
 .footer {
   background-color: var(--main-color);
-  color: black;
+  color: white;
   align-items: center;
 }
 .footer .box-container {
@@ -469,26 +480,42 @@ textarea {
 }
 
 @media (max-width: 768px) {
-  #menu {
+  #menu, #close {
     display: inline-block;
+    position: fixed;
+    right: 0;
+    top:5px;
+    color: white;
+  }
+#close{
+  display: none;
+}
+  .header{
+  width: 100%;
+  }
+  iframe{
+    width: 200px;
+    height: 200px;
   }
 
   .header .navbar {
     position: absolute;
-    top: 99%;
-    right: 0;
-    background: var(--primary);
+     top: 0;
+     right: 0;
+    background: var(--main-color);
     border-top: 0.1rem solid #aaa;
-    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    display: none;
+    transition: 3s ease-in;
+    color: var(--primary);
   }
+  
 
-  .header .navbar.active {
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-  }
 
   .header .navbar a {
     display: block;
     margin: 2rem;
-    color: var(--light-black);
+    color: var(--primary);
+    background: transparent;
+
   }
 }
