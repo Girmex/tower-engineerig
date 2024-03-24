@@ -1,15 +1,23 @@
 let navbar = document.querySelector(".header .navbar");
-let menu = document.querySelector("#menu");
+let menu = document.getElementById("menu");
+let nav=document.getElementById('nav')
+let hide=document.getElementById('close')
 
 menu.onclick = () => {
-  menu.classList.toggle("fa-times");
-  navbar.classList.toggle("active");
+  nav.style.display="block";
+  menu.style.display="none"
+  hide.style.display="block"
+ 
 };
+hide.onclick=()=>{
+  nav.style.display="none";
+  menu.style.display="block"
+  hide.style.display="none"
+}
 
-window.onscroll = () => {
-  menu.classList.remove("fa-times");
-  navbar.classList.remove("active");
-};
+
+
+
 window.onscroll = () => {
   const header = document.querySelector("header");
   if (window.scrollY > 5) {
@@ -18,12 +26,6 @@ window.onscroll = () => {
     header.classList.remove("scrolled");
   }
 };
-  var swiper = new Swiper(".swiper-container", {
-    loop: true,
-    autoplay: {
-      delay: 3000, // Adjust the delay between slides (in milliseconds)
-    },
-  });
 
   const activePage= window.location.pathname;
   const NavLinks= document.querySelectorAll('nav a').forEach(link=>{
